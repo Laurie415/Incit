@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<div id="columns">
+<html ng-app="incItapp" ng-controller="incItCtrl">
+<head>
+  <title>IncIt!</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="http://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+  <script src="http://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+ 
+  <script type="text/javascript" src="incterest.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:600italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="incterest.css">
+</head>
+
+                       <!-- NAV BAR STARTS HERE -->
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">IncIt: Off-beat ideas that made millions</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      </ul>
+      <input placeholder="Search" type="text" ng-model="searchText"/>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Add<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+                          <!-- NAV BAR DONE -->
+  <header>
+    <h1></h1>
+  </header>
+
+<body>
+  <form ng-submit="addInc(newTitle, newDesc, newPoster);">
+    <input type="text" size="20" placeholder=" Insert Name" ng-model="newTitle">
+    <input type="text" size="20" placeholder=" Insert Description" ng-model="newDesc">
+    <input type="text" size="30" placeholder=" Add image URL" ng-model="newPoster"><br/>
+    <input id="button" type="submit" value="Add Company"><br>
+  </form>
+
+  <div class="content">
+    
+     <!-- Section for row of incs -->
+  <div id="wrapper">
+    <div class="pinSection"><h2>{{incSections[0]}}</h2>
+         
+   
+    
+    <!-- A BETTER tile (based on our movies object) -->
+      <div class="pin" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click ="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+         <img src="{{inc.poster}}">
+        </div>
+        <div class="inc-title">
+          {{inc.title}}
+        </div>
+        <div class="pinP">
+          {{inc.description}}
+        </div>
+      </div>
+     </div>
+  </div>
+</div>
+</div>
+
+<!-- Modal -->
+<a data-toggle="modal" href="#myModal"></a>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+   <!-- END OF MODAL -->
+</body>
+</html>

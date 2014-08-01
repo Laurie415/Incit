@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<div id="columns">
+<html ng-app="incItapp" ng-controller="incItCtrl">
+<head>
+  <title>IncIt!</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+  <script src="http://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="incterest.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="incterest.css">
+</head>
+
+<body>
+  <header>
+    <h1>IncIt!</h1>
+  </header>
+  <input placeholder="Search for a Company" type="text" ng-model="searchText"/>
+
+  <form ng-submit="addinc();">
+    <input type="text" size="20" placeholder=" Insert Company/Product's Name" ng-model="newTitle">
+    <input type="text" size="20" placeholder=" Insert Description about the Company/Product" ng-model="newDesc">
+    <input type="text" size="30" placeholder=" Add company image URL" ng-model="newPoster"><br/>
+    <input id="button" type="submit" value="Add Company"><br>
+        
+  </form>
+    <hr/>
+
+  <div class="content">
+
+     <!-- Section for row of incs -->
+    <div class="section-title"><h2>{{incSections[0]}}</h2>
+         <a href="" ng-click="removeInc();"> 
+        <button id="button2">Delete</button>
+         </a>
+    </div>
+
+<div ng-click="addInc"></div>
+
+    <!-- A BETTER tile (based on our movies object) -->
+    <div class="tile" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+      <span class="glyphicon glyphicon-remove" ng-click="removedTile(inc.id);">
+      </span>
+      <div class="movie-title">
+        {{inc.title}}
+      </div>
+      <div class="inc-poster">
+        <img ng-src="{{inc.poster}}">
+      </div>
+      <div class="inc-desc">
+        {{inc.description}}
+      </div>
+      <div>
+            <input type="checkbox" ng-model="inc.removed">
+            <span ng-class="true: 'slain-true', false: ''}[inc.removed]">Delete?</span><br/>
+      </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

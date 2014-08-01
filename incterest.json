@@ -1,0 +1,32 @@
+{
+  "0": {
+    "title": "Rubix Cube",
+    "poster": "images/rubix.png",
+    "description": "As of January 2009, 350 million cubes had been sold worldwide."
+  },
+  "1": {
+    "title": "Santa's Mail",
+    "poster": "images/santa.jpg",
+    "description": "In 2002, Bryon Reese launched Santa Mail, a service that allows kids to send letters to the North Pole. Parents enclose a small fee of just $9.95."    
+  },
+  "2": {
+    "title": "SendaBall",
+    "poster": "images/sendaball.jpg",
+    "description": "So far, SENDaBALL has racked up $1 million in gross sales."    
+  },
+  "3": {
+    "title": "Lucky Break Wishbone",
+    "poster": "images/luckwishbone.jpeg",
+    "description": "So he did his research and found a “secret formula” that allows the Lucky Break Wishbone to break just like a dried wishbone."
+  },
+  "4": {
+    "title": "The Ugly Doll",
+    "poster": "images/uglydoll.jpg",
+    "description": "The Uglydoll may not look pretty, but it has resulted in some good looking sales receipts — it’s raked in over $100 million in retail sales since its debut."
+  },
+  "5": {
+    "title": "The Spork",
+    "poster": "images/spork.jpg",
+    "description": "Joachim Nordwall designed a two-ended spork for the Swedish company Light My Fire in 2003, which has sold more than 20 million units."
+  }
+ }

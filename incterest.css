@@ -1,0 +1,84 @@
+/************************
+HEADER
+************************/
+h1 {
+  color: : white;
+  font-size: 180px;
+  text-align: center;
+  font-style: bold;
+  font-family: 'Josefin Slab', serif;
+}
+
+/************************
+BODY
+************************/
+
+body {
+    text-align: center;
+    font-family: 'Josefin Slab', serif;
+    background-image: url(images/notepad.jpg);
+    background-size: 100%;
+}
+
+#wrapper {
+  width: 90%;
+  max-width: 1100px;
+  min-width: 800px;
+  margin: 50px auto;
+}
+
+.pinSection {
+  -webkit-column-count: 4;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 4;
+  -moz-column-gap: 10px;
+  -moz-column-fill: auto;
+  column-count: 4;
+  column-gap: 15px;
+  column-fill: auto;
+}
+
+
+.pin {  
+  display: inline-block;
+  background: #FEFEFE;
+  border: 2px solid #FAFAFA;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 0 2px 15px;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  padding: 15px;
+  padding-bottom: 5px;
+  background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+  opacity: 1;
+  
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+ img {
+  max-width: 230px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+.pinP {
+  font: 12px/18px 'Josefin Slab', serif;
+  font-style: bold;
+  color: #333;
+  margin: 0;
+}
+
+input {
+  margin: 10px;
+  text-align: center;
+}
+
+
+
+
