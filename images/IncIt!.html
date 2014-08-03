@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///home/laurie/Documents/School-of-Devs/Week3/Pinterest/incterest.html -->
+<html ng-app="incItapp" ng-controller="incItCtrl" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style></head><body class="" style=""><div id="columns">
+
+
+  <title>IncIt!</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="./IncIt!_files/jquery.min.js"></script>
+  <script src="./IncIt!_files/bootstrap.min.js"></script>
+  <script src="./IncIt!_files/firebase.js"></script>
+  <script type="text/javascript" src="./IncIt!_files/angular.min.js"></script>
+  <script src="./IncIt!_files/angularfire.min.js"></script>
+ 
+  <script type="text/javascript" src="./IncIt!_files/incterest.js"></script>
+  <link href="./IncIt!_files/css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="./IncIt!_files/incterest.css">
+
+
+                <!--****** NAV BAR STARTS HERE ******-->
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="file:///home/laurie/Documents/School-of-Devs/Week3/Pinterest/incterest.html#">Think your ideas are crazy? Well, these off-beat ideas made millions! </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      </ul>
+      <input placeholder="Search" type="text" ng-model="searchText" class="ng-pristine ng-valid">
+      
+      <!-- Large modal -->
+        <a button="" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Add a Company
+        </a>
+
+          
+        
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+                    <!-- ******NAV BAR DONE ******-->
+  <header>
+    <h1></h1>
+  </header>
+
+
+  
+
+  <div class="content">
+    
+     <!-- Section for row of incs -->
+  <div id="wrapper">
+    <div class="pinSection"><h2 class="ng-binding"></h2>
+         
+   
+    
+    <!-- A BETTER tile (based on our movies object) -->
+      <!-- ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/rubix.png">
+        </div>
+        <div class="inc-title ng-binding">
+          Rubix Cube
+        </div>
+        <div class="inc-description ng-binding">
+        As of January 2009, 350 million cubes had been sold worldwide.
+         <div class="link"> 
+         <a href="http://rubiks.com/">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/santa.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          Santa's Mail
+        </div>
+        <div class="inc-description ng-binding">
+        In 2002, Bryon Reese launched Santa Mail. By 2009 Santa Mail had responded to nearly 300,000 children
+         <div class="link"> 
+         <a href="https://www.santamail.org/closed/">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/sendaball.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          SendaBall
+        </div>
+        <div class="inc-description ng-binding">
+        A company started by 2 sisters in 2003 because they wanted to send something other than a card. So far, SENDaBALL has racked up $1 million in gross sales.
+         <div class="link"> 
+         <a href="https://secure.sendaball.com/start">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/luckwishbone.jpeg">
+        </div>
+        <div class="inc-title ng-binding">
+          Lucky Break Wishbone
+        </div>
+        <div class="inc-description ng-binding">
+        Ken Ahroni found a “secret formula” that allows the Lucky Break Wishbone to break just like a dried wishbone. His co made $2 million within 2 years
+         <div class="link"> 
+         <a href="http://www.luckybreakwishbone.com/">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/uglydoll.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          The Ugly Doll
+        </div>
+        <div class="inc-description ng-binding">
+        The Uglydoll may not look pretty, but it has resulted in some good looking sales receipts — it’s raked in over $100 million in retail sales since its debut.
+         <div class="link"> 
+         <a href="http://www.uglydolls.com/">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/spork.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          The Spork
+        </div>
+        <div class="inc-description ng-binding">
+        Joachim Nordwall designed a two-ended spork for the Swedish company Light My Fire in 2003, which has sold more than 20 million units.
+         <div class="link"> 
+         <a href="https://secure.sendaball.com/start">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/investInYou.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          Inspirational Quote
+        </div>
+        <div class="inc-description ng-binding">
+        Warren Buffet
+         <div class="link"> 
+         <a href="http://en.wikipedia.org/wiki/Warren_Buffett">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/antennaBall.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          Antenna Balls
+        </div>
+        <div class="inc-description ng-binding">
+        Jason Wall was inspired by a Jack in the Box commerical in 1997 and create some to sell to auto part store. He made $1.2 mil in 1 year.
+         <div class="link"> 
+         <a href="http://myweirdbusiness.blogspot.com/2006/08/how-guy-became-millionaire-selling.html">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/koosh.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          Koosh Ball
+        </div>
+        <div class="inc-description ng-binding">
+        Stillinger came up with the idea for the Koosh ball when he tied rubber bands together to create an easier-to-catch ball for his children in 1987.
+         <div class="link"> 
+         <a href="http://en.wikipedia.org/wiki/Koosh_ball">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="file:///home/laurie/Documents/School-of-Devs/Week3/Pinterest/images/drybar">
+        </div>
+        <div class="inc-title ng-binding">
+          Drybar
+        </div>
+        <div class="inc-description ng-binding">
+        Launced in 2010 by stay a home mom, Alli Webb, and her husband, Drybar is a women's salon that specializes in blowout hairstyling for less
+         <div class="link"> 
+         <a href="http://www.thedrybar.com/">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/snuggie.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          Snuggie
+        </div>
+        <div class="inc-description ng-binding">
+        The company declines to disclose exact sales revenue, but says 30 million blankets have been sold to date.
+         <div class="link"> 
+         <a href="http://www.mysnuggiestore.com/">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/knex.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          K'Nex
+        </div>
+        <div class="inc-description ng-binding">
+        Joel Glickman's construction set added an extra dimension of wheels, pulleys and gears to more traditional concepts. Knex receives $200 million in annual sales.
+         <div class="link"> 
+         <a href="http://finance.yahoo.com/news/surprisingly-simple-ideas-made-millions-040001737.html.">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/dreamBig.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          Inspirational quote
+        </div>
+        <div class="inc-description ng-binding">
+        Richard Branson
+         <div class="link"> 
+         <a href="http://time.com/3060414/how-i-made-my-first-million-richard-branson/">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/petRock.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          Pet Rock
+        </div>
+        <div class="inc-description ng-binding">
+        in April 1975, Gary Dahl came up with the idea of a pet rock when his friends complained about their own pet. Dahl sold 1.5 million Pet Rocks and became a millionaire.
+         <div class="link"> 
+         <a href="http://www.petrock.com/">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/doggles.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          Doggles
+        </div>
+        <div class="inc-description ng-binding">
+        It all happened one day in 1996 when Roni Di Lullo notice that her dog couldn't play fetch well because of the glare in his eyes. Doggles made $3 million in retail sales last year.
+         <div class="link"> 
+         <a href="http://shop.doggles.com/">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/gotjunk.jpeg">
+        </div>
+        <div class="inc-title ng-binding">
+          1-800-GOT-JUNK
+        </div>
+        <div class="inc-description ng-binding">
+        In 1990, Brian Scudamore was a struggling college student looking to make some extra cash. Today, there are 173 franchises, and the company made $137 million last year.
+         <div class="link"> 
+         <a href="">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/toms.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          TOMS
+        </div>
+        <div class="inc-description ng-binding">
+        An overpriced pair of shoe created by Blake Mycoskie with an humanitarian purpose. It survived the recession and hasover 500 retailers were carrying the brand globally.
+         <div class="link"> 
+         <a href="http://www.success.com/article/the-business-of-giving-toms-shoes">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/milldollarhomepage.png">
+        </div>
+        <div class="inc-title ng-binding">
+          The million dollar homepage
+        </div>
+        <div class="inc-description ng-binding">
+        From the simple idea of selling pixels of a 1000x1000 grid for $1 each, the project attracted people like flies. Alex Tew made $1,037,100 in a matter of months.
+         <div class="link"> 
+         <a href="">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/airbnb.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          airbnb
+        </div>
+        <div class="inc-description ng-binding">
+        Renting your room to strangers?! A idea that many investors in the Silcon Valley thought was crazy. In April 2014, the company has an valuation of approximately $10 billion
+         <div class="link"> 
+         <a href="">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/obamaos.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          Obama Os &amp; Cap’n McCains
+        </div>
+        <div class="inc-description ng-binding">
+        Desparate for $, airbnb founders made special-edition Cheerios boxes for both presidential candidates with hot glue and cardboard. These boxes made them 30K to fund their co.
+         <div class="link"> 
+         <a href="http://www.theatlantic.com/business/archive/2013/08/airbnb-ceo-brian-chesky-on-building-a-company-and-starting-a-sharing-revolution/278635/">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText --><div class="pin ng-scope" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
+        <button class="xbutton" ng-click="incs.$remove(inc)">x</button>
+        <div class="pinImg">
+        <img src="./IncIt!_files/quote.jpg">
+        </div>
+        <div class="inc-title ng-binding">
+          Inspirational quote
+        </div>
+        <div class="inc-description ng-binding">
+        Chinese proverb
+         <div class="link"> 
+         <a href="http://www.sba.gov/content/follow-these-steps-starting-business">Click to learn more</a>
+        </div>
+      </div>
+     </div><!-- end ngRepeat: inc in incs | filter: searchText -->
+  </div>
+</div>
+</div>
+
+                  <!-- ******Modal****** -->
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    
+    <!--********** adding content to button *******-->
+    <div class="addButton">
+    <a><h3>There's no such thing as a crazy idea.</h3>
+    <h3>Add your own idea or a company you know below!</h3></a>
+
+      <form ng-submit="addInc(newTitle, newDesc, newPoster, newlink);" class="ng-valid ng-dirty">
+      <label>Name of idea you know about</label>
+    <input type="text" size="20" placeholder=" Insert Name" ng-model="newTitle" class="ng-valid ng-dirty">
+    </form></div>
+     <div class="addButton">
+    <label>Brief info about the idea</label>
+    <input type="text" size="20" placeholder=" Insert Link" ng-model="newDesc" class="ng-valid ng-dirty">
+    </div>
+    <div class="addButton">
+    <label>Insert the url to get more info about the genius idea</label>
+    <input type="text" size="20" placeholder=" Insert Link" ng-model="newLink" class="ng-valid ng-dirty">
+    </div>
+    <div class="addButton">
+    <label>Insert the image this idea is known for</label>
+    <input type="text" size="30" placeholder=" Add Image URL" ng-model="newPoster" class="ng-valid ng-dirty"><br>
+    </div>
+    <input id="button" type="submit" value="Add Company"><br>
+  
+    </div>
+  </div>
+</div>
+
+             <!--*********** END OF MODAL ********-->
+
+</div></body></html>

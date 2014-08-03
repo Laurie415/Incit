@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Josefin Slab';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Josefin Slab SemiBold Italic'), local('JosefinSlab-SemiBoldItalic'), url(http://fonts.gstatic.com/s/josefinslab/v5/af9sBoKGPbGO0r21xJuly0rrE62zycmuf6NB1JeYrwM.woff2) format('woff2'), url(http://fonts.gstatic.com/s/josefinslab/v5/af9sBoKGPbGO0r21xJuly6xza3rXaV_G32gF04a66fI.woff) format('woff');
+}

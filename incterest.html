@@ -27,7 +27,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">IncIt: Off-beat ideas that made millions***************************************************</a>
+      <a class="navbar-brand" href="#">Think your ideas are crazy? Well, these off-beat ideas made millions! </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,7 +37,7 @@
       <input placeholder="Search" type="text" ng-model="searchText"/>
       
       <!-- Large modal -->
-        <a button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Add a Company</button>
+        <a button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Add a Product</button>
         </a>
 
           </ul>
@@ -71,9 +71,10 @@
         <div class="inc-title">
           {{inc.title}}
         </div>
-         <div class="pinP"> 
-         <a href="{{inc.description}}">More Info about Product</a>
-          
+        <div class="inc-description">
+        {{inc.description}}
+         <div class="link"> 
+         <a href="{{inc.link}}">Click to learn more</a>
         </div>
       </div>
      </div>
@@ -93,15 +94,19 @@
     <h3>Add your own idea or a company you know below!</h3></a>
 
       <form ng-submit="addInc(newTitle, newDesc, newPoster, newlink);">
-      <label>Name of company/product you know about</label>
+      <label>Name of idea you know about</label>
     <input type="text" size="20" placeholder=" Insert Name" ng-model="newTitle">
     </div>
-    <div class="addButton">
-    <label>Insert the url to get more info about the company</label>
+     <div class="addButton">
+    <label>Brief info about the idea</label>
     <input type="text" size="20" placeholder=" Insert Link" ng-model="newDesc">
     </div>
     <div class="addButton">
-    <label>Insert the image this company is known for</label>
+    <label>Insert the url to get more info about the genius idea</label>
+    <input type="text" size="20" placeholder=" Insert Link" ng-model="newLink">
+    </div>
+    <div class="addButton">
+    <label>Insert the image this idea is known for</label>
     <input type="text" size="30" placeholder=" Add Image URL" ng-model="newPoster"><br/>
     </div>
     <input id="button" type="submit" value="Add Company"><br>
