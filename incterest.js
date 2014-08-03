@@ -1,24 +1,26 @@
-  var app = angular.module("incItapp", ["firebase"]);
-  app.controller('incItCtrl', function($scope, $firebase){
-  
+var app = angular.module("incItapp", ["firebase"]);
+app.controller('incItCtrl', function($scope, $firebase){
+
   var incItFb =new Firebase('https://incit.firebaseio.com/');
   var sync = $firebase(incItFb);
-    $scope.incs = sync.$asArray();
+  $scope.incs = sync.$asArray();
     
   $scope.addInc = function(title, desc, image){
     if($scope.newInc != "" && $scope.newTitle != "" && $scope.newPoster != "" && $scope.newDesc != "") {
-        $scope.incs.$add({
-          title: $scope.newTitle,
-          poster: $scope.newPoster,
-          description: $scope.newDesc,
-          });
-        $scope.newTitle = "";
-        $scope.newPoster = "";
-        $scope.newDesc = "";
-      } else {
-        alert("Please fill out the form")
-      }
+      $scope.incs.$add({
+        title: $scope.newTitle,
+        poster: $scope.newPoster,
+        description: $scope.newDesc,
+      });
+      $scope.newTitle = "";
+      $scope.newPoster = "";
+      $scope.newDesc = "";
+    } 
+    else {
+      alert("Please fill out the form")
+    }
   }
+  
 });
 
   //   $scope.newTitle = "";
