@@ -2,11 +2,54 @@
 HEADER
 ************************/
 h1 {
-  color: : white;
-  font-size: 180px;
-  text-align: center;
+  font-size: 80px;
+  text-align: left;
   font-style: bold;
-  font-family: 'Josefin Slab', serif;
+  font-family: 'Open Sans', sans-serif;
+ 
+}
+
+.incFont {
+  color: white;
+  
+}
+
+.itFont {
+  color:red;
+}
+
+.periodFont {
+  color:black;
+}
+
+/************************
+NavBar
+************************/ 
+.navbar {
+background-color: #d18f4a;
+font: red;
+font-style: bold;
+}
+
+a {
+  color: blue;
+  font-family: 'Courgette', cursive;
+}
+
+.navbar-brand {
+  color: black;
+  font-family: 'Courgette', cursive;
+  margin-top: 35px;
+  font-size: 20px;
+}
+
+.searchBar {
+  margin-top: 20px;
+  font-size: 17px; 
+}
+
+.addButton {
+  font-size: 17px;
 }
 
 /************************
@@ -39,6 +82,9 @@ body {
   column-fill: auto;
 }
 
+.pinSection:hover .pin:not(:hover) {
+  opacity:.7;
+}
 .xbutton {
   position: relative;
     top: -16px;
@@ -82,7 +128,4 @@ input {
   margin: 10px;
   text-align: center;
 }
-
-
-
 

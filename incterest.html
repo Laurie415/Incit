@@ -12,47 +12,29 @@
   <script src="http://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
  
   <script type="text/javascript" src="incterest.js"></script>
-  <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:600italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="incterest.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
 </head>
-
-                <!--****** NAV BAR STARTS HERE ******-->
-<nav class="navbar navbar-default" role="navigation">
+               <!--****** NAV BAR STARTS HERE ******-->
+<nav class="navbar" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Think your ideas are crazy? Well, these off-beat ideas made millions! </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-      </ul>
-      <input placeholder="Search" type="text" ng-model="searchText"/>
-      
+      <header>
+      <h1><span class="incFont">INC<span class="itFont">it</span><span class="periodFont">.</span>
+       </h1>
+      </header>
+        </div>
+         <p class="navbar-brand">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Think your ideas are crazy? Well, these off-beat ideas actually made millions!</p>
+         <p class="searchBar"><input placeholder="Search" type="text" ng-model="searchText"/></p>
       <!-- Large modal -->
-        <a button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Add a Product</button>
-        </a>
-
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
+        <p class="addButton"><a button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Add a Product</button>
+        </a></p>
   </div><!-- /.container-fluid -->
 </nav>
                     <!-- ******NAV BAR DONE ******-->
-  <header>
-    <h1></h1>
-  </header>
-
 <body>
-  
 
   <div class="content">
     
@@ -91,7 +73,7 @@
     <!--********** adding content to button *******-->
     <div class="addButton">
     <a><h3>There's no such thing as a crazy idea.</h3>
-    <h3>Add your own idea or a company you know below!</h3></a>
+    <h4>Add your own idea or a company you know below!</h4></a>
 
       <form ng-submit="addInc(newTitle, newDesc, newPoster, newlink);">
       <label>Name of idea you know about</label>
