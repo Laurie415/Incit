@@ -33,7 +33,7 @@ font-style: bold;
 
 a {
   color: blue;
-  font-family: 'Courgette', cursive;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .navbar-brand {
@@ -58,7 +58,7 @@ BODY
 
 body {
     text-align: center;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Open Sans', sans-serif;
     background-image: url(images/notepad.jpg);
     background-size: 100%;
 }
@@ -68,6 +68,7 @@ body {
   max-width: 1100px;
   min-width: 800px;
   margin: 50px auto;
+  border-radius: 25px;
 }
 
 .pinSection {
