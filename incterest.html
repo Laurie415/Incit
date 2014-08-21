@@ -13,24 +13,21 @@
  
   <script type="text/javascript" src="incterest.js"></script>
   <link rel="stylesheet" type="text/css" href="incterest.css">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
 </head>
                <!--****** NAV BAR STARTS HERE ******-->
 <nav class="navbar" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <header>
-      <h1><span class="incFont">INC<span class="itFont">it</span><span class="periodFont">.</span>
+      <h1><span class="incFont">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Entrepreneur It!</span>
        </h1>
-      </header>
         </div>
-         <p class="navbar-brand">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Think your ideas are crazy? Well, these off-beat ideas actually made millions!</p>
-         <p class="searchBar"><input placeholder="Search" type="text" ng-model="searchText"/></p>
+       
+         <div class="searchBar"><input placeholder="Search" type="text" ng-model="searchText"/></div>
       <!-- Large modal -->
-        <p class="addButton"><a button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Add a Product</button>
-        </a></p>
+        <div class="addButton"><a button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Add a Product</button>
+        </a></div>
   </div><!-- /.container-fluid -->
 </nav>
                     <!-- ******NAV BAR DONE ******-->
@@ -46,7 +43,9 @@
     
     <!-- A BETTER tile (based on our movies object) -->
       <div class="pin" ng-repeat="inc in incs | filter: searchText" ng-click="viewDetails()">
-        <button class="xbutton" ng-click ="incs.$remove(inc)">x</button>
+         <div class="xbutton"><button type="button" ng-click ="incs.$remove(inc)" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-remove"></span></button></div>
+
         <div class="pinImg">
         <img src="{{inc.poster}}">
         </div>
@@ -72,23 +71,22 @@
     
     <!--********** adding content to button *******-->
     <div class="addButton">
-    <h3>There's no such thing as a crazy idea.</h3>
-    <h4>Add your own idea or a company you know below!</h4>
+    <h3>Add your own idea or a company you know below!</h3>
 
       <form ng-submit="addInc(newTitle, newDesc, newPoster, newlink);">
-      <label>Name of idea you know about</label>
+      <label>Name of idea you know about</label><br>
     <input type="text" size="20" placeholder=" Insert Name" ng-model="newTitle">
     </div>
      <div class="addButton">
-    <label>Brief info about the idea</label>
+    <label>Brief info about the idea</label><br>
     <input type="text" size="20" placeholder=" Insert Link" ng-model="newDesc">
     </div>
     <div class="addButton">
-    <label>Insert the url to get more info about the genius idea</label>
+    <label>Insert the url to get more info about the genius idea</label><br>
     <input type="text" size="20" placeholder=" Insert Link" ng-model="newLink">
     </div>
     <div class="addButton">
-    <label>Insert the image this idea is known for</label>
+    <label>Insert the image this idea is known for</label><br>
     <input type="text" size="30" placeholder=" Add Image URL" ng-model="newPoster"><br/>
     </div>
     <input id="button" type="submit" value="Add Company"><br>
